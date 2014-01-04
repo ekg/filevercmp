@@ -21,7 +21,7 @@ This function is intended to be a replacement for strverscmp.
 *fine print*
 
 
-*Copyright (C) 1995 Ian Jackson <iwj10@cus.cam.ac.uk>
+   Copyright (C) 1995 Ian Jackson <iwj10@cus.cam.ac.uk>
    Copyright (C) 2001 Anthony Towns <aj@azure.humbug.org.au>
    Copyright (C) 2008-2009 Free Software Foundation, Inc.
 
@@ -36,5 +36,4 @@ This function is intended to be a replacement for strverscmp.
    GNU General Public License for more details.
 
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.* 
-
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
