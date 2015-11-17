@@ -1,13 +1,21 @@
+
+CC ?=		gcc
+CFLAGS ?=
+
+OBJS=	main.o filevercmp.o
+
 all: filevercmp
 
 clean:
-	rm -f filevercmp
-	rm -f filevercmp.o
+	rm -f filevercmp ${OBJS}
 
 .PHONY: all clean
 
-filevercmp.o: filevercmp.c main.c filevercmp.h
-	gcc -c filevercmp.c
+filevercmp.o: filevercmp.c filevercmp.h
+	${CC} ${CFLAGS} -c filevercmp.c
 
-filevercmp: filevercmp.o
-	gcc -o filevercmp main.c filevercmp.o
+main.o: main.c filevercmp.h
+	${CC} ${CFLAGS} -c main.c
+
+filevercmp: ${OBJS}
+	${CC} ${CFLAGS} -o filevercmp ${OBJS}
