@@ -5,6 +5,7 @@ CFLAGS ?=	-O -g
 AR ?=		ar
 MKDIR ?=	mkdir
 INSTALL ?=	install -c
+STRIP ?=	strip
 DESTDIR ?=	stage
 PREFIX ?=	/usr/local
 
@@ -28,7 +29,7 @@ install: all
 	${INSTALL} ${LIB} ${DESTDIR}${PREFIX}/lib
 
 install-strip: install
-	${STRIP_CMD} ${DESTDIR}${PREFIX}/bin/${BIN}
+	${STRIP} ${DESTDIR}${PREFIX}/bin/${BIN}
 
 clean:
 	rm -rf ${BIN} ${LIB} ${OBJS} ${MAIN} ${DESTDIR}
