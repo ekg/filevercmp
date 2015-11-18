@@ -24,8 +24,10 @@ ${LIB}: ${OBJS}
 
 install: all
 	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
+	${MKDIR} -p ${DESTDIR}${PREFIX}/include
 	${MKDIR} -p ${DESTDIR}${PREFIX}/lib
 	${INSTALL} ${BIN} ${DESTDIR}${PREFIX}/bin
+	${INSTALL} *.h ${DESTDIR}${PREFIX}/include
 	${INSTALL} ${LIB} ${DESTDIR}${PREFIX}/lib
 
 install-strip: install
