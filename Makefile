@@ -1,5 +1,12 @@
 
-# Use ?= to allow overriding from env or command-line
+# Use ?= to allow overriding from the env or command-line, e.g.
+#
+#       make CXXFLAGS="-O3 -fPIC" install
+#
+# Package managers will override many of these variables automatically, so
+# this is aimed at making it easy to create packages (Debian packages,
+# FreeBSD ports, MacPorts, pkgsrc, etc.)
+
 CC ?=		cc
 CFLAGS ?=	-O -g
 AR ?=		ar
