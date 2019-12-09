@@ -12,10 +12,10 @@ clean:
 .PHONY: all clean
 
 filevercmp.o: filevercmp.c filevercmp.h
-	${CC} ${CFLAGS} -c filevercmp.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c filevercmp.c
 
 main.o: main.c filevercmp.h
-	${CC} ${CFLAGS} -c main.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c main.c
 
 filevercmp: ${OBJS}
-	${CC} ${CFLAGS} -o filevercmp ${OBJS}
+	$(CC) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS) -o filevercmp ${OBJS}
